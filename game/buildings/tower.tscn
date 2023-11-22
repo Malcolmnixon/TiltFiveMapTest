@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://cjv1f51362dy8"]
+
+[ext_resource type="MeshLibrary" uid="uid://grhpuybb8gk1" path="res://addons/kaykit_dungeon_remastered/Assets/mesh_library.meshlib" id="1_hjkpn"]
+[ext_resource type="PackedScene" uid="uid://d3nacaip0hw0q" path="res://addons/kaykit_dungeon_remastered/Assets/scenes/crates_stacked.tscn" id="2_apq6p"]
+[ext_resource type="PackedScene" uid="uid://bt0b38m2r8s4o" path="res://addons/kaykit_dungeon_remastered/Assets/scenes/keg_decorated.tscn" id="3_cgk11"]
+[ext_resource type="PackedScene" uid="uid://edujtrhgw26l" path="res://addons/kaykit_dungeon_remastered/Assets/scenes/table_long.tscn" id="4_0ti0s"]
+[ext_resource type="PackedScene" uid="uid://bsp42we0vtsdf" path="res://addons/kaykit_dungeon_remastered/Assets/scenes/box_stacked.tscn" id="5_vwmux"]
+[ext_resource type="PackedScene" uid="uid://by04pgqhp11hx" path="res://addons/kaykit_dungeon_remastered/Assets/scenes/table_long_decorated_c.tscn" id="6_xdmif"]
+
+[node name="Tower" type="Node3D"]
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("1_hjkpn")
+cell_size = Vector3(1, 1, 1)
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+data = {
+"cells": PackedInt32Array(0, 0, 1441961, 0, 4, 1441939, 0, 8, 1441939, 0, 65532, 1441939, 0, 65528, 1441939, 0, 65524, 1048722, 0, 12, 655506, 4, 65524, 655507, 8, 65524, 655507, 12, 65524, 655507, 4, 12, 655507, 8, 12, 655507, 12, 12, 655507, 16, 12, 655507, 20, 12, 655507, 24, 12, 655507, 28, 12, 655507, 32, 12, 1441938, 32, 8, 1441939, 32, 4, 1441939, 32, 0, 1441939, 32, 65532, 1441939, 32, 65528, 1441939, 32, 65524, 146, 28, 65524, 147, 24, 65524, 147, 20, 65524, 147, 16, 65524, 147, 262172, 65524, 147, 262168, 65524, 147, 262176, 65528, 1441939, 262176, 65532, 1441939, 262176, 0, 1441939, 262176, 4, 1441939, 262176, 8, 1441939, 262172, 12, 655507, 262168, 12, 655507, 262164, 12, 655507, 262164, 65524, 655507, 262176, 12, 1441938, 262176, 65524, 146, 262160, 65524, 1048722, 262160, 12, 655506, 262160, 65528, 1048723, 262160, 65532, 1048723, 262160, 4, 1048723, 262160, 8, 1048723, 262160, 0, 1441961, 262146, 10, 1441984, 262150, 10, 1441984, 262154, 10, 1441984, 262158, 10, 1441984, 262146, 6, 1441984, 262146, 2, 1441984, 262150, 2, 1441984, 262154, 2, 1441984, 262154, 6, 1441984, 262150, 6, 1441984, 262158, 6, 1441984, 262146, 65526, 1441984, 262146, 65530, 1441984, 262146, 65534, 1441984, 262150, 65534, 1441984, 262150, 65530, 1441984, 262150, 65526, 1441984, 262154, 65526, 1441984, 262154, 65530, 1441984, 262154, 65534, 1441984, 262158, 65526, 1441984, 262158, 65530, 1441984, 262157, 65533, 1441974, 262159, 65533, 1441974, 262157, 3, 1441974, 262159, 3, 1441974, 524306, 65530, 1441984, 524306, 65534, 1441984, 524306, 2, 1441984, 524306, 6, 1441984, 524306, 10, 1441984, 524310, 10, 1441984, 524310, 6, 1441984, 524310, 2, 1441984, 524310, 65534, 1441984, 524310, 65530, 1441984, 524310, 65526, 1441984, 524314, 65526, 1441984, 524314, 65530, 1441984, 524314, 65534, 1441984, 524314, 2, 1441984, 524314, 6, 1441984, 524314, 10, 1441984, 524318, 10, 1441984, 524318, 6, 1441984, 524318, 2, 1441984, 524318, 65534, 1441984, 524318, 65530, 1441984, 524318, 65526, 1441984, 262144, 12, 655481, 262144, 65524, 1048697, 262144, 65528, 1048698, 262148, 65524, 122, 262152, 65524, 122, 262156, 65524, 122, 262144, 8, 1441914, 262148, 12, 655482, 262152, 12, 655482, 262156, 12, 655482, 262144, 65532, 1048698, 262144, 4, 1048698, 262158, 65524, 124, 262158, 12, 124, 262144, 2, 1441917, 262144, 65534, 1441917, 524304, 65534, 1441917, 524304, 2, 1441917, 524304, 65524, 1048697, 524304, 12, 655481, 524320, 12, 1441913, 524320, 65524, 121, 524320, 65528, 1441914, 524320, 65532, 1441914, 524320, 0, 1441914, 524320, 4, 1441914, 524320, 8, 1441914, 524316, 12, 655482, 524312, 12, 655482, 524308, 12, 655482, 524304, 8, 1048698, 524304, 4, 1048698, 524304, 65532, 1048698, 524304, 65528, 1048698, 524308, 65524, 122, 524312, 65524, 122, 524316, 65524, 122, 524306, 65526, 1441984)
+}
+metadata/_editor_floor_ = Vector3(0, 8, 0)
+
+[node name="crates_stacked_gltf" parent="." instance=ExtResource("2_apq6p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4124, 8.05, -9.8604)
+
+[node name="keg_decorated_gltf" parent="." instance=ExtResource("3_cgk11")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 13.7441, 4.05, -6.13521)
+
+[node name="table_long_gltf" parent="." instance=ExtResource("4_0ti0s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.8155, 4.05, 7.2564)
+
+[node name="table_long_gltf2" parent="." instance=ExtResource("4_0ti0s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.1938, 8.05, 8.64541)
+
+[node name="box_stacked_gltf" parent="." instance=ExtResource("5_vwmux")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.841, 8.05, 9.63004)
+
+[node name="keg_decorated_gltf2" parent="." instance=ExtResource("3_cgk11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.2019, 8.05, -10.1475)
+
+[node name="table_long_decorated_C_gltf" parent="." instance=ExtResource("6_xdmif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1686, 8.05, -9.0467)

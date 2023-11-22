@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://cq5giko35i8so"]
+
+[ext_resource type="PackedScene" uid="uid://co3lxjgp5ifh2" path="res://addons/tiltfive_tools/staging/character.tscn" id="1_wh68k"]
+[ext_resource type="Script" path="res://game/character.gd" id="2_k42ol"]
+[ext_resource type="PackedScene" uid="uid://xow7tktplxl2" path="res://assets/gdquest/sophia.glb" id="2_r27ng"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_byvg5"]
+radius = 0.4
+height = 1.6
+
+[node name="Character" instance=ExtResource("1_wh68k")]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." index="0"]
+safe_margin = 0.01
+script = ExtResource("2_k42ol")
+
+[node name="sophia" parent="CharacterBody3D" index="0" instance=ExtResource("2_r27ng")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+shape = SubResource("CapsuleShape3D_byvg5")
+
+[connection signal="movement_changed" from="CharacterBody3D" to="CharacterBody3D" method="_on_movement_changed"]

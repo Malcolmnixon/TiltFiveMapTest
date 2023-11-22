@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1sl3uep3wpdd"]
+
+[ext_resource type="MeshLibrary" uid="uid://grhpuybb8gk1" path="res://addons/kaykit_dungeon_remastered/Assets/mesh_library.meshlib" id="1_qjmut"]
+[ext_resource type="PackedScene" uid="uid://d3nacaip0hw0q" path="res://addons/kaykit_dungeon_remastered/Assets/scenes/crates_stacked.tscn" id="2_31be1"]
+[ext_resource type="PackedScene" uid="uid://bt0b38m2r8s4o" path="res://addons/kaykit_dungeon_remastered/Assets/scenes/keg_decorated.tscn" id="3_11gr3"]
+
+[node name="NarrowTower" type="Node3D"]
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("1_qjmut")
+cell_size = Vector3(1, 1, 1)
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+data = {
+"cells": PackedInt32Array(65535, 0, 169, 327679, 65534, 192, 327679, 65530, 192, 327679, 65526, 192, 327673, 65526, 1048745, 1, 65524, 146, 1, 65534, 1441939, 1, 65530, 1441939, 65531, 65524, 655507, 65527, 65524, 655507, 65523, 65524, 1048722, 65523, 65528, 1048723, 65523, 65532, 1048723, 65523, 0, 655506, 65531, 0, 655507, 65527, 0, 655507, 327667, 65532, 1048723, 327667, 65528, 1048723, 327671, 65524, 147, 327667, 65524, 1048722, 327667, 0, 655506, 327673, 0, 1441938, 327673, 65532, 1441939, 327673, 65528, 1441937, 327671, 0, 655505, 1, 65528, 1048721, 65533, 65524, 145, 327675, 65534, 192, 327675, 65530, 192, 589815, 65534, 192, 589815, 65530, 192, 589815, 65526, 192, 589812, 65535, 182, 589812, 65533, 182, 589812, 65531, 182, 589812, 65529, 182, 589812, 65527, 182, 589812, 65525, 182, 262145, 65524, 121, 589817, 0, 1441913, 589811, 0, 655481, 589811, 65524, 1048697, 589811, 65532, 1048698, 589811, 65528, 1048698, 589817, 65532, 1048698, 589815, 65524, 122, 589817, 65528, 1441918, 327677, 0, 655486, 327677, 65524, 126, 262145, 0, 1048702, 262145, 65532, 1048698, 262145, 65528, 1048698, 327675, 0, 655484, 589815, 0, 655484)
+}
+metadata/_editor_floor_ = Vector3(0, 8, 0)
+
+[node name="crates_stacked_gltf" parent="." instance=ExtResource("2_31be1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.96982, 4.05, -6.04048)
+
+[node name="keg_decorated_gltf" parent="." instance=ExtResource("3_11gr3")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -10.028, 8.05, -2.28235)
